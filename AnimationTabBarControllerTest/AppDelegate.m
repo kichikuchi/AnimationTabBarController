@@ -6,6 +6,8 @@
 //  Copyright © 2015年 菊池和紀. All rights reserved.
 //
 
+#import "AnimationTabBarItem.h"
+#import "AnimationTabBarController.h"
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -17,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    AnimationTabBarController *tabBarController = [[AnimationTabBarController alloc] init];
+    
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

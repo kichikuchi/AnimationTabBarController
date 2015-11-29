@@ -13,6 +13,10 @@
 		A9D479C61C0972630043F4AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D479C41C0972630043F4AB /* Main.storyboard */; };
 		A9D479C81C0972630043F4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D479C71C0972630043F4AB /* Assets.xcassets */; };
 		A9D479CB1C0972630043F4AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D479C91C0972630043F4AB /* LaunchScreen.storyboard */; };
+		A9D479D51C0988930043F4AB /* tabIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D479D41C0988930043F4AB /* tabIcon@2x.png */; };
+		A9D479D81C0989150043F4AB /* AnimationTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D479D71C0989150043F4AB /* AnimationTabBarItem.m */; };
+		A9D479DE1C0B28C80043F4AB /* AnimationTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D479DD1C0B28C80043F4AB /* AnimationTabBarController.m */; };
+		A9D479E11C0B2E410043F4AB /* BarItemAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D479E01C0B2E410043F4AB /* BarItemAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		A9D479C71C0972630043F4AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9D479CA1C0972630043F4AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9D479CC1C0972630043F4AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9D479D41C0988930043F4AB /* tabIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabIcon@2x.png"; sourceTree = "<group>"; };
+		A9D479D61C0989150043F4AB /* AnimationTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTabBarItem.h; sourceTree = "<group>"; };
+		A9D479D71C0989150043F4AB /* AnimationTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTabBarItem.m; sourceTree = "<group>"; };
+		A9D479DC1C0B28C80043F4AB /* AnimationTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTabBarController.h; sourceTree = "<group>"; };
+		A9D479DD1C0B28C80043F4AB /* AnimationTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTabBarController.m; sourceTree = "<group>"; };
+		A9D479DF1C0B2E410043F4AB /* BarItemAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarItemAnimation.h; sourceTree = "<group>"; };
+		A9D479E01C0B2E410043F4AB /* BarItemAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarItemAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 		A9D479BA1C0972630043F4AB /* AnimationTabBarControllerTest */ = {
 			isa = PBXGroup;
 			children = (
+				A9D479D41C0988930043F4AB /* tabIcon@2x.png */,
 				A9D479BE1C0972630043F4AB /* AppDelegate.h */,
 				A9D479BF1C0972630043F4AB /* AppDelegate.m */,
 				A9D479C11C0972630043F4AB /* ViewController.h */,
@@ -67,6 +79,12 @@
 				A9D479C91C0972630043F4AB /* LaunchScreen.storyboard */,
 				A9D479CC1C0972630043F4AB /* Info.plist */,
 				A9D479BB1C0972630043F4AB /* Supporting Files */,
+				A9D479D61C0989150043F4AB /* AnimationTabBarItem.h */,
+				A9D479D71C0989150043F4AB /* AnimationTabBarItem.m */,
+				A9D479DC1C0B28C80043F4AB /* AnimationTabBarController.h */,
+				A9D479DD1C0B28C80043F4AB /* AnimationTabBarController.m */,
+				A9D479DF1C0B2E410043F4AB /* BarItemAnimation.h */,
+				A9D479E01C0B2E410043F4AB /* BarItemAnimation.m */,
 			);
 			path = AnimationTabBarControllerTest;
 			sourceTree = "<group>";
@@ -139,6 +157,7 @@
 				A9D479CB1C0972630043F4AB /* LaunchScreen.storyboard in Resources */,
 				A9D479C81C0972630043F4AB /* Assets.xcassets in Resources */,
 				A9D479C61C0972630043F4AB /* Main.storyboard in Resources */,
+				A9D479D51C0988930043F4AB /* tabIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D479C31C0972630043F4AB /* ViewController.m in Sources */,
+				A9D479DE1C0B28C80043F4AB /* AnimationTabBarController.m in Sources */,
 				A9D479C01C0972630043F4AB /* AppDelegate.m in Sources */,
 				A9D479BD1C0972630043F4AB /* main.m in Sources */,
+				A9D479D81C0989150043F4AB /* AnimationTabBarItem.m in Sources */,
+				A9D479E11C0B2E410043F4AB /* BarItemAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +320,7 @@
 				A9D479D11C0972630043F4AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
