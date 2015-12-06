@@ -9,16 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@protocol BarItemAnimationProtocol;
-
-@interface BarItemAnimation : NSObject <BarItemAnimationProtocol>
-
-@end
-
 @protocol BarItemAnimationProtocol <NSObject>
 
 - (void)playAnimation:(UIImageView *)icon textLabel:(UILabel *)textLabel;
 - (void)deselectAnimation:(UIImageView *)icon textLabel:(UILabel *)textLabel defaultTextColor:(UIColor *)defaultColor;
 - (void)selectedState:(UIImageView *)icon textLabel:(UILabel *)textLabel;
+
+@end
+
+@interface BarItemAnimation : NSObject <BarItemAnimationProtocol>
 
 @end

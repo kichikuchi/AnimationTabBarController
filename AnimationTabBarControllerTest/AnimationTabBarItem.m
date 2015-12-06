@@ -22,6 +22,7 @@
     if (self) {
         
         self.textColor = UIColor.blackColor;
+        self.animation = [[BarItemAnimation alloc] init];
         
         return self;
     }

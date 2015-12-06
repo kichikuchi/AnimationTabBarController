@@ -134,7 +134,13 @@
 
 - (void)tapHandler:(UITapGestureRecognizer *)sender
 {
-    NSLog(@"tapされたよ");
+    NSArray *items = self.tabBar.items;
+    NSInteger currentIndex = sender.view.tag;
+    
+    AnimationTabBarItem *animationItem = items[currentIndex];
+    UIImageView *icon = self.iconsView[currentIndex][0];
+    UILabel *textLabel = self.iconsView[currentIndex][1];
+    [animationItem playAnimation:icon textLabel:textLabel];
 }
 
 @end
