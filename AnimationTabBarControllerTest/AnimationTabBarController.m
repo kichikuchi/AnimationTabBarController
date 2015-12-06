@@ -62,8 +62,8 @@
         [self createConstraints:icon container:container size:item.image.size yOffset:-5];
         
         [container addSubview:textLabel];
-        CGFloat textLabelWidt = self.tabBar.frame.size.width / (CGFloat)self.tabBar.items.count - 5.0;
-        [self createConstraints:textLabel container:container size:CGSizeMake(textLabelWidt, 10) yOffset:16];
+        CGFloat textLabelWidth = self.tabBar.frame.size.width / (CGFloat)self.tabBar.items.count - 5.0;
+        [self createConstraints:textLabel container:container size:CGSizeMake(textLabelWidth, 10) yOffset:16];
         
         self.iconsView = @[icon, textLabel];
         
