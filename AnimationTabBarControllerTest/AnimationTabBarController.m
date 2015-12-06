@@ -11,7 +11,7 @@
 
 @interface AnimationTabBarController ()
 
-@property NSArray *iconsView;
+@property NSMutableArray *iconsView;
 
 @end
 
@@ -20,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.iconsView = [NSMutableArray array];
     
     UIViewController *controller1 = [[UIViewController alloc] init];
     UIViewController *controller2 = [[UIViewController alloc] init];
@@ -41,7 +43,6 @@
     NSArray *items = self.tabBar.items;
     NSInteger itemsCount = self.tabBar.items.count - 1;
     
-    
     [items enumerateObjectsUsingBlock:^(AnimationTabBarItem *item, NSUInteger idx, BOOL * _Nonnull stop) {
         UIView *container = containers[[NSString stringWithFormat:@"container%lu", itemsCount - idx]];
         container.tag = idx;
@@ -62,10 +63,10 @@
         [self createConstraints:icon container:container size:item.image.size yOffset:-5];
         
         [container addSubview:textLabel];
-        CGFloat textLabelWidth = self.tabBar.frame.size.width / (CGFloat)self.tabBar.items.count - 5.0;
+        CGFloat textLabelWidth = self.tabBar.frame.size.width / (CGFloat)self.tabBar.items.count - 5.f;
         [self createConstraints:textLabel container:container size:CGSizeMake(textLabelWidth, 10) yOffset:16];
         
-        self.iconsView = @[icon, textLabel];
+        [self.iconsView addObject:@[icon, textLabel]];
         
         if (idx == 0) {
             [item selectedState:icon textLabel:textLabel];
@@ -101,7 +102,7 @@
     
     NSString *formatString = @"H:|-(0)-[container0]";
     for (int i = 1; i <= itemsCount; i++) {
-        [formatString stringByAppendingString:[NSString stringWithFormat:@"-(0)-[container%d(==container0)]",i]];
+        formatString = [formatString stringByAppendingString:[NSString stringWithFormat:@"-(0)-[container%d(==container0)]",i]];
     }
     formatString = [formatString stringByAppendingString:@"-(0)-|"];
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:formatString options:NSLayoutFormatDirectionRightToLeft metrics:nil views:containerDict];
