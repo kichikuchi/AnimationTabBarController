@@ -13,7 +13,7 @@
 - (void)playAnimation:(UIImageView *)icon textLabel:(UILabel *)textLabel
 {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    animation.values = @[@(1.0),@(1.4),@(0.9),@(1.15),@(0.95),@(1.02),@(1.0)];
+    animation.values = @[@(1.0), @(1.25), @(0.95), @(1.0)];
     animation.duration = 0.5;
     animation.calculationMode = kCAAnimationCubic;
     
